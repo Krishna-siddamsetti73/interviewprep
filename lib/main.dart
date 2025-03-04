@@ -48,7 +48,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> login() async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2:5000/login'),
+      Uri.parse(
+          'https://6830-2406-7400-35-bd33-2979-7e50-11af-dee4.ngrok-free.app/login'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode(<String, String>{
         'email': email,
@@ -71,7 +72,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> register() async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2:5000/register'),
+      Uri.parse(
+          'https://6830-2406-7400-35-bd33-2979-7e50-11af-dee4.ngrok-free.app/register'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
